@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: 'https://github.com/your-username/manifest-repo.git' # Replace with actual Git repo URL
+    repoURL: 'https://github.com/Shaunak-ondare/argocd-repo-fr-deployment.git'
     path: base
     targetRevision: HEAD
   destination:
