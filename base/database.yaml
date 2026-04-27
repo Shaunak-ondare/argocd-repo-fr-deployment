@@ -99,7 +99,7 @@ spec:
           name: postgres-init-script
   volumeClaimTemplates:
   - metadata:
-      name: postgres-data
+      name: postgres-data-v2
     spec:
       accessModes: [ "ReadWriteOnce" ]
       resources:
