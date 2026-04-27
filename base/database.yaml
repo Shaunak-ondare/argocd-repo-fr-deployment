@@ -71,7 +71,7 @@ spec:
         securityContext:
           runAsUser: 0
         volumeMounts:
-        - name: postgres-data
+        - name: postgres-data-v2
           mountPath: /var/lib/postgresql/data
       containers:
       - name: postgres
@@ -88,7 +88,7 @@ spec:
         - name: PGDATA
           value: /var/lib/postgresql/data/pgdata
         volumeMounts:
-        - name: postgres-data
+        - name: postgres-data-v2
           mountPath: /var/lib/postgresql/data
         - name: init-script
           mountPath: /docker-entrypoint-initdb.d/init.sql
