@@ -16,7 +16,7 @@ spec:
       containers:
       - name: backend
         # The image tag will be automatically updated by the CI/CD pipeline
-        image: your-dockerhub-user/todo-backend:latest
+        image: shaunakondare/todo-backend:dd8fa77e363d1600ca45dc37032a7890f40f6792
         ports:
         - containerPort: 5000
         env:
