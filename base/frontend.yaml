@@ -16,7 +16,7 @@ spec:
       containers:
       - name: frontend
         # The image tag will be automatically updated by the CI/CD pipeline
-        image: your-dockerhub-user/todo-frontend:latest
+        image: shaunakondare/todo-frontend:92051bcc34f850ca4334cde270f6c295181596f5
         ports:
         - containerPort: 80
         livenessProbe:
