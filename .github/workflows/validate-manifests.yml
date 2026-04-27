@@ -1,0 +1,25 @@
+name: Validate Kubernetes Manifests
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  lint-and-validate:
+    name: Lint & Validate YAML
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Manifest Repo
+        uses: actions/checkout@v3
+
+      - name: Setup Kubeval
+        run: |
+          wget https://github.com/instrumenta/kubeval/releases/latest/download/kubeval-linux-amd64.tar.gz
+          tar xf kubeval-linux-amd64.tar.gz
+          sudo cp kubeval /usr/local/bin
+
+      - name: Validate Kubernetes Manifests
+        # Validates all YAML files in the base directory against Kubernetes schemas
+        run: kubeval --strict --ignore-missing-schemas base/*.yaml
