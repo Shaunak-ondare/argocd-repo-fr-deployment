@@ -63,6 +63,7 @@ spec:
     spec:
       securityContext:
         fsGroup: 999
+        fsGroupChangePolicy: "Always"
       initContainers:
       - name: fix-permissions
         image: busybox
