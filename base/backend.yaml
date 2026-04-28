@@ -16,7 +16,7 @@ spec:
       containers:
       - name: backend
         # The image tag will be automatically updated by the CI/CD pipeline
-        image: shaunakondare/todo-backend:35d58fed04b4f1c2f6effa440fcb6e0b140ba3b5
+        image: shaunakondare/todo-backend:db979e57c5b42325b6bf513e2e7a8438613e4278
         ports:
         - containerPort: 5000
         env:
