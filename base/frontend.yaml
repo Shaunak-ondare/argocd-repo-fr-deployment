@@ -16,7 +16,7 @@ spec:
       containers:
       - name: frontend
         # The image tag will be automatically updated by the CI/CD pipeline
-        image: shaunakondare/todo-frontend:dd8fa77e363d1600ca45dc37032a7890f40f6792
+        image: shaunakondare/todo-frontend:35d58fed04b4f1c2f6effa440fcb6e0b140ba3b5
         ports:
         - containerPort: 80
         livenessProbe:
